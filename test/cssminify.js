@@ -2,10 +2,10 @@ var Blob = require('gear').Blob,
     cssminify = require('..').cssminify,
     less = require('..').less,
     fixtures = {
-        css: new Blob(' .bar { display: none;  } '),
+        css: new Blob(' .bar { display: none;  } ', {name: 'fixtures_css'}),
         min: '.bar{display:none}',
         cleancssmin: '.bar{display:none}',
-        less: new Blob('@color: #FF0;\ndiv { color: @color; }'),
+        less: new Blob('@color: #FF0;\ndiv { color: @color; }', {name: 'fixtures_less'}),
         compiled: 'div {\n  color: #ffff00;\n}\n'
     };
 
